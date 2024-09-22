@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>pelle.zip</title>
+			<link rel="shortcut icon" href="../pelle_favicon.ico" />
+		<style>
+			* {
+						            margin: 0;
+						            padding: 0;
+						        }
+						        body, html {
+						            height: 100%;
+						        }
+						        .container {
+						            position: relative;
+						            width: 100%;
+						            height: 100%;
+						        }
+						        img {
+						            position: absolute;
+						            width: 100%;
+						            height: 100%;
+						            object-fit: cover;
+						            z-index: 1;
+						        }
+								  * {
+								            margin: 0;
+								            padding: 0;
+								        }
+								        body, html {
+								            height: 100%;
+								        }
+								        .container {
+								            position: relative;
+								            width: 100%;
+								            height: 100%;
+								        }
+								        img {
+								            position: absolute;
+								            width: 100%;
+								            height: 100%;
+								            object-fit: cover;
+								            z-index: 1;
+								        }
+								    
+								   .back-button {
+								            position: absolute;
+								            top: 9px;
+								            right: 15px;
+								            padding: 10px 20px;
+								            background-color:transparent;
+								            color: white;
+								            border: none;
+								            cursor: pointer;
+								            z-index: 3;
+								            display: none; /* 初始状态下隐藏 */
+											font-size: 30px;
+								        }
+								        .back-button.visible {
+								            display: block; /* 当切换到其他图片时显示返回按钮 */
+								        }
+									a{
+										
+										position: relative;
+										top:10px;
+										left:1%;
+										z-index: 1;
+										font-size: 30px;
+										text-decoration: none;
+									}
+					</style>
+				</head>
+				
+				<body>
+					<audio id="clickSound">
+					       <!-- <source src="../audio/elementi2.mp3" type="audio/mpeg"> -->
+							  <source src="../audio/elementi1.mp3" type="audio/mpeg">
+					        您的浏览器不支持音频播放。
+					    </audio>
+					<audio autoplay loop id="bg">
+						<source src="../audio/bg4.wav">
+					</audio>
+					
+					<div class="container">
+					    <!-- 默认背景图片 -->
+					    <img src="../foto/3-2.png" alt="背景图片" id="backgroundImage">
+						<button class="back-button" id="backButton">👚</button>
+						<a href="../index.html">🚪</a>
+					<!-- 	<a href="camera3.html">🩰</a> -->
+					</div>
+				</body>
+				
+			<script src="../javascript/3-2.js">
+			 </script>
+			</html>

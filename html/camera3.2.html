@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>pelle.zip</title>
+		<link rel="shortcut icon" href="../pelle_favicon.ico" />
+		<style>
+			*{
+				margin: 0%;
+				padding: 0%;
+			}
+			body{
+				background-image: url('../foto/3-1.png');
+				background-size: 1520px 860px;
+				/* background-repeat: no-repeat; */
+			}
+			/* a{
+				position: absolute;
+				right: 15px;
+			} */
+			.custom-cursor {
+			            cursor: url('../foto/cursor.png'); /* 使用自定义图案 */
+			        }
+		</style>
+	</head>
+	<body>
+		<div>
+			<audio id="clickSound">
+			       <source src="../audio/elementi2.mp3" type="audio/mpeg">
+					<!--  <source src="../audio/elementi1.mp3" type="audio/mpeg"> -->
+			        您的浏览器不支持音频播放。
+			    </audio>
+			<audio autoplay>
+				<source src="../audio/bg5.mp3">
+			</audio>
+				<!-- <a href="../camera1.html"><img src="../foto/buttone.png" width=30px/></a> -->
+				<img src="transparent.png" usemap="#image-map" style="width: 100%; height: 100%; opacity: 0; position: absolute; top: 0; left: 0;">
+			    <map name="image-map">
+			        <!-- 定义点击区域 (圆形区域) -->
+			        <area shape="circle" coords="800,590,80" href="camera3.3.html" alt="Go to New Page"  onmouseover="setCustomCursor()" onmouseout="resetCursor()" >
+			        <!-- 你可以定义多个区域 -->
+			       <!-- <area shape="rect" coords="200,200,300,300" href="anotherpage.html" alt="Go to Another Page"> -->
+			    </map>
+		</div>
+	</body>
+	 <script>
+	        // 当鼠标移入时，给 body 添加自定义鼠标样式
+	        function setCustomCursor() {
+	            document.body.classList.add('custom-cursor');
+	        }
+	
+	        // 当鼠标移出时，移除自定义鼠标样式
+	        function resetCursor() {
+	            document.body.classList.remove('custom-cursor');
+	        }
+			
+			const clickSound = document.getElementById('clickSound');
+										
+			// 监听整个页面的点击事件
+			document.body.addEventListener('click', function() {
+			    // 播放音效
+			    clickSound.play();
+			});
+	    </script>
+</html>
