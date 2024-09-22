@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Danza moderna</title>
+		<link rel="shortcut icon" href="index1_favicon.ico" />
+		<style>
+		 * {
+		            margin: 0;
+		            padding: 0;
+		        }
+		        body, html {
+		            height: 100%;
+		        }
+		        /* 全屏背景图 */
+		        body {
+		         background-image: url('foto/bgindex.png'); /* 替换为你的背景图片路径 */ 
+				 background-color: black;
+		            background-size: cover;
+		            background-position: center;
+		            background-repeat: no-repeat;
+		            display: flex;
+		            justify-content: center;
+		            align-items: center;
+		            position: relative;
+					overflow: clip;
+		        }
+		          /* 随机散落的图片样式 */
+		               .random-img {
+		                   position: absolute;
+		                  /* width: 200px; *//* 图片宽度 */
+		                   /* height: 100px; /* 图片高度 */ */
+		                   cursor: pointer;
+		                   transition: transform 0.5s ease; /* 增加平滑过渡效果 */
+		               }
+		               /* 通过随机数控制图片位置 */
+		               .img1 {
+		                   top: 3%;
+		                   left: 2%;
+						   width: 300px;
+						  height: 400px;
+		               }
+		               .img2 {
+		                   top: 10%;
+		                   left: 70%;
+						   width: 400px;
+		               }
+		               .img3 {
+		                   top: 60%;
+		                   left: 8%;
+						   width: 400px;
+		               }
+		    </style>
+	</head>
+	<body>
+		<div>
+			<audio autoplay loop>
+				<source src="audio/bg3.wav">
+			</audio>
+			<audio id="clickSound">
+			       <source src="audio/elementi.flac" type="audio/mpeg">
+				  <!--  <source src="audio/elementi1.mp3" type="audio/mp3"> --> 
+			    </audio>
+				
+		  <!-- 图片 -->
+		    <a href="html/camera1-0.html" target="_self"><img src="foto/1.png" class="random-img img1" alt="Image 1"></a>
+		    <a href="html/camera2-0.html" target="_self"><img src="foto/2.png" class="random-img img2" alt="Image 2"></a>
+		    <a href="html/camera3-0.html" target="_self"><img src="foto/3.png" class="random-img img3" alt="Image 3"></a>
+
+		</div>
+		
+		    <script type="text/javascript" src="javascript/index.js">  
+		    </script>
+
+	</body>
+</html>
