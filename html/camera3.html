@@ -12,37 +12,30 @@
 			body{
 				background-image: url('../foto/3-0.png');
 				background-size: 1520px 860px;
-				/* background-repeat: no-repeat; */
+			
 			}
-			/* a{
-				position: absolute;
-				right: 15px;
-			} */
+			
 			.custom-cursor {
-			            cursor: url('../foto/cursor.png'); /* 使用自定义图案 */
-			        }
+			     cursor: url('../foto/cursor.png'); /* 图案 */
+			}
 		</style>
+		
 	</head>
 	<body>
 		<div>
-			
-				<!-- <a href="../camera1.html"><img src="../foto/buttone.png" width=30px/></a> -->
 				<img src="transparent.png" usemap="#image-map" style="width: 100%; height: 100%; opacity: 0; position: absolute; top: 0; left: 0;">
 			    <map name="image-map">
-			        <!-- 定义点击区域 (圆形区域) -->
-			        <area shape="circle" coords="800,520,50" href="camera3.2.html" alt="Go to New Page"  onmouseover="setCustomCursor()" onmouseout="resetCursor()" >
-			        <!-- 你可以定义多个区域 -->
-			       <!-- <area shape="rect" coords="200,200,300,300" href="anotherpage.html" alt="Go to Another Page"> -->
+			    <area shape="circle" coords="800,520,50" href="camera3.2.html" alt="Go to New Page"  onmouseover="setCustomCursor()" onmouseout="resetCursor()" >
 			    </map>
 		</div>
 	</body>
 	 <script>
-	        // 当鼠标移入时，给 body 添加自定义鼠标样式
+	        // 当鼠标移入
 	        function setCustomCursor() {
 	            document.body.classList.add('custom-cursor');
 	        }
 	
-	        // 当鼠标移出时，移除自定义鼠标样式
+	        // 当鼠标移出时
 	        function resetCursor() {
 	            document.body.classList.remove('custom-cursor');
 	        }

@@ -5,76 +5,81 @@
 		<title>"Mirror mirror"</title>
 		<link rel="shortcut icon" href="../mirror_favicon.ico" />
 		<style>
-			 * {
-			            margin: 0;
-			            padding: 0;
-			        }
-			        body, html {
-			            height: 100%;
-			        }
-			        .container {
-			            position: relative;
-			            width: 100%;
-			            height: 100%;
-			        }
-			        img {
-			            position: absolute;
-			            width: 100%;
-			            height: 100%;
-			            object-fit: cover;
-			        }
-			        canvas {
-			            position: absolute;
-			            top: 0;
-			            left: 0;
-			            z-index: 2;
-			        }	
-					
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body,
+			html {
+				height: 100%;
+			}
+
+			.container {
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			canvas {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+
 			a {
-			            position: absolute;
-			            z-index: 4; /* 链接位于底部图片上方，上方图片和canvas下方 */
-			            top: 20px; /* 距离底部20px */
-			            left: 96%;
-			            transform: translateX(-50%);
-			           /* background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */ */
-			            padding: 10px 20px;
-			            text-decoration: none;
-			            color: #000;
-			            font-size: 30px;
-			            border-radius: 5px;
-			            transition: background-color 0.3s ease;
-			            display: none; /* 初始不可见 */
-			        }
-			
-			        a.visible {
-			            display: block; /* 当擦除到一定程度时显示链接 */
-			        }
-			
-			       a img {
-			                   width: 40px;  /* 设置图片大小为15px */
-			                  height: 40px; /* 确保高度与宽度相等，防止被裁减 
-			                   display: block; /* 使图片为块级元素，以防止底部间隙 */
-			               }
+				position: absolute;
+				z-index: 4;
+				top: 15px;
+				left: 92%;
+				transform: translateX(-50%);
+				padding: 10px 20px;
+				text-decoration: none;
+				color: #000;
+				font-size: 30px;
+				border-radius: 5px;
+				transition: background-color 0.3s ease;
+				display: none;
+
+			}
+
+			a.visible {
+				display: block;
+				/* 当擦除到一定程度时显示链接 */
+			}
+
+			a img {
+				width: 90px;
+				height: 90px;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			
-			 <audio id="longPressSound">
-			        <source src="../audio/c.MP3" type="audio/mpeg"> <!-- 替换为你的音效路径 -->
-			        您的浏览器不支持音频播放。
-			    </audio>
+
+			<audio id="longPressSound">
+				<source src="../audio/c.MP3" type="audio/mpeg"> 
+				您的浏览器不支持音频播放。
+			</audio>
 			<audio autoplay>
 				<source src="../audio/bg1.wav">
 			</audio>
-		    <!-- 底部图片 -->
-		    <img src="../foto/1-2.png" alt="背景图">
-			  <!-- 添加的超链接 -->
-		     <a href="../html/camera1.2.html" target="_self" id="hiddenLink">
-			   <img src="../mirror3_favicon.ico" alt="💃">
-			 </a>
-		    <!-- 顶部图片（将会被擦除） -->
-		    <canvas id="canvas"></canvas>
+			<!-- 底部图片 -->
+			<img src="../foto/1-2.png" alt="背景图">
+			<!-- 超链接 -->
+			<a href="../html/camera1.2.html" target="_self" id="hiddenLink">
+				<img src="../mirror.favicon.ico" alt="💃">
+			</a>
+			<!-- 顶部图片被擦除） -->
+			<canvas id="canvas"></canvas>
 		</div>
 	</body>
 	<script type="text/javascript" src="../javascript/1.js">
